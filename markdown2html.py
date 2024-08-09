@@ -15,8 +15,10 @@ def markdown2html(markdown_file, output_file_name):
     Second argument is the output file name
     Requirements:
 
-    If the number of arguments is less than 2: print in STDERR Usage: ./markdown2html.py README.md README.html and exit 1
-    If the Markdown file doesn’t exist: print in STDER Missing <filename> and exit 1
+    If the number of arguments is less than 2: print in STDERR Usage:
+    ./markdown2html.py README.md README.html and exit 1
+    If the Markdown file doesn’t exist: print in STDER Missing
+    <filename> and exit 1
     Otherwise, print nothing and exit 0
     """
     if not os.path.exists(markdown_file):
@@ -37,11 +39,13 @@ def markdown2html(markdown_file, output_file_name):
     # Exit successfully
     sys.exit(0)
 
+
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
+        print("Usage: ./markdown2html.py README.md README.html",
+              file=sys.stderr)
         sys.exit(1)
-    
+
     # Get the arguments
     markdown_file = sys.argv[1]
     output_file_name = sys.argv[2]
