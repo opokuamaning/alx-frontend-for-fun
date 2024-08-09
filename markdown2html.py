@@ -21,34 +21,52 @@ def markdown2html(markdown_file, output_file_name):
     <filename> and exit 1
     Otherwise, print nothing and exit 0
     """
-    if not os.path.exists(markdown_file):
-        print(f"Missing {markdown_file}", file=sys.stderr)
-        sys.exit(1)
+#     if not os.path.exists(markdown_file):
+#         print(f"Missing {markdown_file}", file=sys.stderr)
+#         sys.exit(1)
 
-    # Read the markdown file
-    with open(markdown_file, 'r') as f:
-        content = f.read()
+#     # Read the markdown file
+#     with open(markdown_file, 'r') as f:
+#         content = f.read()
 
-    # Convert markdown to html
-    html = markdown.markdown(content)
+#     # Convert markdown to html
+#     html = markdown.markdown(content)
 
-    # Write the html to the output file
-    with open(output_file_name, 'w') as f:
-        f.write(html)
+#     # Write the html to the output file
+#     with open(output_file_name, 'w') as f:
+#         f.write(html)
 
-    # Exit successfully
-    sys.exit(0)
+#     # Exit successfully
+#     sys.exit(0)
 
 
-if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage: ./markdown2html.py README.md README.html",
-              file=sys.stderr)
-        sys.exit(1)
+# if __name__ == "__main__":
+#     if len(sys.argv) < 3:
+#         print("Usage: ./markdown2html.py README.md README.html",
+#               file=sys.stderr)
+#         sys.exit(1)
 
-    # Get the arguments
-    markdown_file = sys.argv[1]
-    output_file_name = sys.argv[2]
+#     # Get the arguments
+#     markdown_file = sys.argv[1]
+#     output_file_name = sys.argv[2]
 
-    # Convert markdown to html
-    markdown2html(markdown_file, output_file_name)
+#     # Convert markdown to html
+#     markdown2html(markdown_file, output_file_name)
+
+# Check if the number of arguments is less than 2
+if len(sys.argv) < 3:
+    print("Usage: ./markdown2html.py README.md README.html",
+          file=sys.stderr)
+    sys.exit(1)
+
+# Get the arguments
+markdown_file = sys.argv[1]
+output_file_name = sys.argv[2]
+
+# Check if the Markdown file doesn't exist
+if not os.path.exists(markdown_file):
+    print(f"Missing {markdown_file}", file=sys.stderr)
+    sys.exit(1)
+
+# if all checks pass, read the markdown file
+sys.exit(0)
