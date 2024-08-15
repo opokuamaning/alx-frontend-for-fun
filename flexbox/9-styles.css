@@ -527,17 +527,13 @@ ul.row {
 /* Section SERVICES 
       ============================= */
 
-.section-about-us [class*="col-"] {
-  align-self: center;
-}
-
 .section-services .row {
   flex-wrap: wrap;
 }
 
 /* Section ABOUT US */
-[class*="col-"] {
-  margin: 1rem;
+.section-about-us [class*="col-"] {
+  align-self: center;
 }
 
 /*** 4. CARD ***/
